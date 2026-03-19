@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TIENDA DE JUEGOS  🎮</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header>
+    <h1>TIENDA DE JUEGOS  🎮</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Categoria</a></li>
+            <li><a href="#">Lanzamientos</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="carrusel">
+
+    <div class="slides">
+       <img src="imagenes/imagen1.png" class="slide">
+<img src="imagenes/imagen2.jpg" class="slide">
+<img src="imagenes/imagen3.jpg" class="slide">
+    </div>
+
+</section>
+
+
+<section class="contenido">
+
+    <h2> Tipo de Videojuegos mas conocidos </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>RPG</h3>
+            <p>Es un estilo donde el jugador controla a un personaje y desarrolla su historia. Normalmente se puede subir de nivel, mejorar habilidades, conseguir armas y tomar decisiones que afectan la historia del juego. </p>
+        </div>
+
+        <div class="card">
+            <h3>Shooter</h3>
+            <p>Es un estilo de juego basado en disparos. El objetivo suele ser eliminar enemigos usando diferentes armas. Puede ser en primera persona (FPS) o tercera persona.</p>
+        </div>
+
+        <div class="card">
+            <h3>Estrategia</h3>
+            <p>En este estilo el jugador debe pensar y planear antes de actuar. Generalmente consiste en administrar recursos, crear ejércitos o construir bases para vencer al enemigo.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<script>
+
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+function mostrarSlide() {
+
+    slides.forEach(slide => slide.style.display = "none");
+
+    index++;
+
+    if(index > slides.length){
+        index = 1;
+    }
+
+    slides[index-1].style.display = "block";
+
+    setTimeout(mostrarSlide, 3000);
+}
+
+mostrarSlide();
+
+</script>
+
+</body>
+</html>
